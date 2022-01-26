@@ -1,7 +1,9 @@
 {
-  "version": 2,
-  "projects": {
-    "web-giddh": "apps/web-giddh",
-    "web-giddh-e2e": "apps/web-giddh-e2e"
-  }
+    "version": 2,
+    "projects": {
+        "base": "libs/base",
+        "login": "libs/login",
+        "web-giddh": "apps/web-giddh",
+        "web-giddh-e2e": "apps/web-giddh-e2e"
+    }
 }

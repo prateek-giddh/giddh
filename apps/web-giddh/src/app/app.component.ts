@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'giddh-app-root',
+  selector: 'giddh-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

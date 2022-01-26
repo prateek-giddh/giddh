@@ -1,0 +1,26 @@
+{
+    "projectType": "library",
+    "root": "libs/base",
+    "sourceRoot": "libs/base/src",
+    "prefix": "giddh",
+    "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/libs/base"],
+            "options": {
+                "jestConfig": "libs/base/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": [
+                    "libs/base/src/**/*.ts",
+                    "libs/base/src/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": []
+}

@@ -1,28 +1,28 @@
 {
-  "root": "apps/web-giddh-e2e",
-  "sourceRoot": "apps/web-giddh-e2e/src",
-  "projectType": "application",
-  "tags": [],
-  "targets": {
-    "e2e": {
-      "executor": "@nrwl/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/web-giddh-e2e/cypress.json",
-        "devServerTarget": "web-giddh:serve:development",
-        "tsConfig": "apps/web-giddh-e2e/tsconfig.json"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "web-giddh:serve:production"
+    "root": "apps/web-giddh-e2e",
+    "sourceRoot": "apps/web-giddh-e2e/src",
+    "projectType": "application",
+    "tags": [],
+    "targets": {
+        "e2e": {
+            "executor": "@nrwl/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/web-giddh-e2e/cypress.json",
+                "devServerTarget": "web-giddh:serve:development",
+                "tsConfig": "apps/web-giddh-e2e/tsconfig.json"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "web-giddh:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["apps/web-giddh-e2e/**/*.{js,ts}"]
+            },
+            "outputs": ["{options.outputFile}"]
         }
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/web-giddh-e2e/**/*.{js,ts}"]
-      },
-      "outputs": ["{options.outputFile}"]
     }
-  }
 }
