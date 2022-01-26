@@ -14,13 +14,9 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken": "MGYyMGY0MDQtZmVmYi00NjQyLTg0MzktOTFmZDIxY2I4MjdifHJlYWQtd3JpdGU="
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "MGYyMGY0MDQtZmVmYi00NjQyLTg0MzktOTFmZDIxY2I4MjdifHJlYWQtd3JpdGU=",
+        "parallel": 1
       }
     }
   },
@@ -32,15 +28,36 @@
       }
     ]
   },
-  "projects": {
-    "web-giddh": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "packageManager": "npm"
+  },
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
     },
-    "web-giddh-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "web-giddh"
-      ]
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
-  }
+  },
+  "defaultProject": "web-giddh"
 }
